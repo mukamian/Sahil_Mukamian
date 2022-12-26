@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css?family=Product+Sans');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;  
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("bg.jpg");
+  display: flex;
+}
+
+.slider-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-slide {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+  overflow:hidden;
+}
+
+
+.card-container {
+  padding: 30px;
+  transition: 0.5s ease-in-out;
+}
+
+
+/* CARDS */
+
+.cards {
+  transition: 0.5s ease-in-out;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  position: center;
+  margin: 20px;
+  padding: 20px;
+  width: 520px;
+  min-height: 150px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  background:#e4e4e4;
+  transition: 0.5s ease-in-out;
+}
+
+.card #education_table {
+	table-layout: fixed;
+  	width: 100%;
+  	border-collapse: collapse;
+}
+
+.card__apply {
+	padding-left: 10px;
+  grid-row: 5/6;
+  align-self: center;
+}
+
+
+.left-slide > div {
+  height: 100%;
+  width: 100%;
+  /*display: flex;
+  flex-direction: column;*/
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: -1;
+  
+  transition:0.3s ease-in-out;
+}
+
+.hnav {
+	margin-top: 20%;
+	padding-left:35%;
+	font-size: 2rem;
+	list-style: none;
+  transition:0.3s ease-in-out;
+}
+
+.hnav a{
+	text-decoration: none;
+	color: #b5b5b5;
+  
+  transition: 0.3s ease-in-out;
+}
+
+
+
+.hnav  > .active > a {
+	font-size: 3rem;
+	font-weight: bold;
+	text-decoration: none;
+	color: #ffffff;
+  transition: 0.3s ease-in-out;
+}
+
+.hnav  > .active.hover > a {
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.3s ease-in-out;
+}
+
+
+.hnav  > .hover > a {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+
+.intro-card{
+  display: fixed;
+  transition: 0.3s ease-in-out;
+}
+
+.intro-card-intro th, td {
+  display: fixed;
+  padding: 15px;
+  text-align: left;
+}
+
+.intro-card img {
+  border-radius: 50%;
+}
+
+.right-slide {
+	height: 100%;
+	position: absolute;
+	left: 35%;
+	width:65%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.right-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+.about-container{
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+ #about.about-container p{
+ 	font-size: 1.5rem;
+ 	text-align: justify;
+ }
+
+.education-container{
+  padding-top:10%;
+  padding-left:10%;
+  padding-right:10%; 
+  display: flex;
+  align-items: center;
+}
+
+.skills{
+
+  left: -40px;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: center;
+  padding:none;
+  transition: transform 0.5s ease-in-out;
+}
+
+.skill td {
+  padding: none;
+  text-align: left;
+}
+
+.experience-container{
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;  
+}
+
+
+.exp_cards {
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: transform 0.5s ease-in-out;
+}
+
+.exp_card-1,.exp_card-2 {
+  padding: none;
+  margin: 30%;
+  position: center;
+  margin: 20px;
+  padding: 20px;
+  width: 520px;
+  min-height: 150px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  /*box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);*/
+  transition: all 0.2s;
+  /*background:#ffffff;*/
+  scale:0.2px;
+} 
+
+
+.pos_comp {
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  align-content: center;
+}
+
+.exp_card_position{
+  width: 250px;
+  font-size: 40px;
+  padding: none;
+}
+
+
+.exp_card_company{
+  margin-top: 5%;
+  padding: none;
+  font-size: 20px;
+}
+
+.exp_card_desp {
+    text-align: justify;
+  margin-left:8%;
+  grid-row: 6/6;
+  align-self: top;
+}
+
+.project-container {
+  max-width: 600px;
+  max-height: 1080px;
+  display: grid;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.project {
+  background-color: transparent;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+  z-index: 6;
+}
+.row1{
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+}
+
+.project.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project.active::before,
+.project.active::after {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  color: #2ecc71;
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.project.active::before {
+  color: #3498db;
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
+  
+}
+
+.project-title {
+  margin: 0 35px 0 0;
+}
+
+.project-tech {
+  opacity: .6;
+  margin: 0 -25px 0 0;
+}
+
+.project.active .project-tech {
+  display: none;
+}
+
+.project-text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.project.active .project-text {
+  display: block;
+}
+
+.project-toggle {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+   
+}
+
+.project-toggle:focus {
+  outline: 0;
+}
+
+.project-toggle .fa-times {
+  display: none;
+}
+
+.project.active .project-toggle .fa-times {
+  color: #fff;
+  display: block;
+}
+
+.project.active .project-toggle .fa-chevron-down {
+  display: none;
+}
+
+.project.active .project-toggle {
+  background-color: #9fa4a8;
+}
+
+
+
+.volunteercontainer {
+  width: 600px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* list styles */
+
+.volunteercontainer ol {
+  padding: 18vh;
+  list-style: none;
+  color: #ccc;
+}
+
+.volunteercontainer ol li {
+  
+  font: bold 24pt helvetica, arial, sans-serif;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.volunteercontainer li p {
+  font: 12pt helvetica, arial, sans-serif;
+  color: #555;
+  padding-left: 60px;
+}
+
+.volunteercontainer span {
+  position: absolute;
+  line-height: 25px;
+}
+  
